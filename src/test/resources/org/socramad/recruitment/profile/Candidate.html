@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head>
+<meta charset="UTF-8"/>
+<title>Profile context: Candidate</title>
+</head>
+<body>
+<h1>Profile context: Candidate</h1>
+<h2>User Story: create a new candidate profile</h2>
+		<p>
+			As a recruiter<br/>
+			I want to create a new candidate profile<br/>
+			In order to track his recruitment process events<br/>
+		</p>
+<h3>Scenario: request to add the candidate</h3>
+		<p>
+			Given a candidate’s name “Helder De Oliveira”<br/>
+			and candidate’s email “hdo@hdo.pt”<br/>
+			and candidate’s phone number “00351 234987654”<br/>
+			When I request to add the candidate<br/>
+			Then the candidate id should be returned<br/>
+		</p>
+
+<h2>User Story: create a new candidate profile</h2>
+		<p>
+			As a recruiter<br/>
+			I want to add a position to a candidate<br/>
+			In order to list his past jobs<br/>
+		</p>	
+</body>
+</html>
