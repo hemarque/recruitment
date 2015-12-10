@@ -14,11 +14,13 @@
 		</p>
 <h3>Scenario: request to add the candidate</h3>
 		<p>
-			Given a candidate’s name “Helder De Oliveira”<br/>
-			and candidate’s email “hdo@hdo.pt”<br/>
-			and candidate’s phone number “00351 234987654”<br/>
-			When I request to add the candidate<br/>
-			Then the candidate id should be returned<br/>
+			Given a candidate’s name “<span concordion:set="#name">Helder De Oliveira</span>"<br/>
+			and candidate’s email “<span concordion:set="#email">hdo@hdo.pt</span>”<br/>
+			and candidate’s phone number “<span concordion:set="#phone">00351 234987654</span>”<br/>
+			When I request to add the candidate
+			<span concordion:execute="#result = addCandidate(#name, #email, #phone)"></span><br/>
+			Then the candidate should be 
+			<span concordion:assertTrue="#result">stored</span><br/>
 		</p>
 
 <h2>User Story: create a new candidate profile</h2>
