@@ -22,6 +22,16 @@
 			Then the candidate should be 
 			<span concordion:assertTrue="#result">stored</span><br/>
 		</p>
+		<p>
+			Given an existing candidate<br/>
+			and the candidate’s name “<span concordion:set="#sameName">Helder De Oliveira</span>"<br/>
+			and the candidate’s email “<span concordion:set="#sameEmail">hdo@hdo.pt</span>”<br/>
+			and the candidate’s phone number “<span concordion:set="#samePhone">00351 234987654</span>”<br/>
+			When I request to add the candidate
+			<span concordion:execute="#result = addCandidate(#sameName, #sameEmail, #samePhone)"></span><br/>
+			Then the candidate should  
+			<span concordion:assertFalse="#result">not be stored</span><br/>
+		</p>
 
 <h2>User Story: create a new candidate profile</h2>
 		<p>
